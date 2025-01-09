@@ -1,0 +1,7 @@
+{
+    "start": "nodemon",
+    "watch": ["src/**/*.ts"],
+    "exec": "npx ts-node src/server.ts",
+    "ext": "ts"
+  }
+  
