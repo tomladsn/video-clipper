@@ -1,13 +1,85 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #post-content {
+  color: black; /* Ensure text is visible */
+  font-size: 16px; /* Adjust font size as needed */
+  overflow: hidden; /* Ensure text does not overflow */
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+            width: 400px;
+            height: 600px; /* Adjust the height as needed */
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .header img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        .header .name {
+            font-weight: bold;
+        }
+        .content {
+            width: 100%;
+            height: 200px; /* Adjust the height as needed */
+            overflow: hidden;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        .content div {
+            position: absolute;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .image {
+            width: 100%;
+            height: 200px; /* Set a fixed height for the image */
+            margin-top: 10px;
+            overflow: hidden; /* Ensure the image fits within the box */
+        }
+        .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Maintain aspect ratio and cover the area */
+            border-radius: 10px;
+        }
+        .date {
+            font-size: 0.9em;
+            color: #888;
+            align-self: flex-start;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img id="profile-image" src="" alt="Profile Image">
+        <div id="poster-name" class="name"></div>
+    </div>
+    <div class="content">
+        <div id="post-content"></div>
+    </div>
+    <div class="image">
+        <img id="post-image" src="" alt="Post Image">
+    </div>
+    <div id="date" class="date"></div>
+</body>
 </html>
